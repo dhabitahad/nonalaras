@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- SEO Meta Tags -->
+    <title>Nona Laras | Restoran di Madiun dengan Cita Rasa Nusantara Autentik</title>
+    <meta
+        content="Nona Laras adalah restoran di Madiun pilihan tepat untuk menikmati kuliner Nusantara autentik. Tempat makan enak, luas, nyaman dengan resep warisan leluhur."
+        name="description" />
+    <meta content="Restoran di Madiun, Kuliner Madiun, Makan Enak Madiun, Nona Laras, Tempat Makan Keluarga Madiun"
+        name="keywords" />
+    <!-- Typography & Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#3b0900",
+                        "tertiary-container": "#757474",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#ff9782",
+                        "background": "#fcf9f4",
+                        "surface-container": "#f0ede9",
+                        "on-primary-container": "#fffbff",
+                        "primary": "#ac2d00",
+                        "on-secondary-fixed-variant": "#7a2f20",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface": "#fcf9f4",
+                        "on-tertiary-container": "#fefcfb",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "primary-fixed": "#ffdbd1",
+                        "tertiary": "#5c5c5c",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb5a0",
+                        "on-secondary-fixed": "#3e0400",
+                        "surface-tint": "#b02e00",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1c1c19",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#782d1f",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "surface-variant": "#e5e2dd",
+                        "on-error": "#ffffff",
+                        "outline": "#8f7068",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "outline-variant": "#e3beb5",
+                        "on-surface": "#1c1c19",
+                        "surface-dim": "#dcdad5",
+                        "primary-container": "#d63c05",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "secondary-fixed-dim": "#ffb4a5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#872100",
+                        "inverse-surface": "#31302d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3ee",
+                        "on-surface-variant": "#5a413a",
+                        "secondary-fixed": "#ffdad3",
+                        "tertiary-fixed": "#e4e2e1",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary": "#984535",
+                        "surface-bright": "#fcf9f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Nona Laras",
+      "image": "https://example.com/logo.jpg",
+      "description": "Nona Laras adalah restoran di Madiun yang menyajikan hidangan autentik Nusantara dengan resep warisan.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Raya Madiun",
+        "addressLocality": "Madiun",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "ID"
+      },
+      "telephone": "+6282338454845",
+      "servesCuisine": "Indonesian",
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 10:00-22:00"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-container'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-panel {
+            background: rgba(252, 249, 244, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-[24px] sticky top-0 z-50 full-width top-0 bg-[#fcf9f4]/80 no-border shadow-[0_32px_64px_rgba(28,28,25,0.04)] font-['Inter'] tracking-[-0.02em] leading-[1.6]">
+        <div class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-[#1c1c19] dark:text-[#fcf9f4]">
+                Nona Laras
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#">Home</a>
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#about">Our Story</a>
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#menu">Menu</a>
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#testimonials">Testimonials</a>
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#location">Location</a>
+                <a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:text-[#ac2d00] hover:opacity-100 transition-all duration-300"
+                    href="#faq">FAQ</a>
+            </div>
+            <div class="flex space-x-4">
+                <a class="hidden md:block px-6 py-2 rounded-xl bg-surface-container-highest text-primary font-medium hover:bg-surface-dim transition-colors duration-200"
+                    href="#location">
+                    Find Us
+                </a>
+                <a class="px-6 py-2 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-medium hover:shadow-lg transition-all duration-200 scale-95 active:scale-90 transition-transform duration-200"
+                    href="https://wa.me/082338454845" target="_blank">
+                    Book a Table
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative pt-24 pb-32 overflow-hidden bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <span
+                            class="uppercase tracking-[0.05em] font-bold text-sm text-primary px-3 py-1 bg-primary-fixed rounded-full inline-block">Nona
+                            Laras Heritage</span>
+                        <h1 class="text-5xl lg:text-6xl font-black tracking-[-0.02em] leading-[1.1] text-on-surface">
+                            Restoran di Madiun
+                        </h1>
+                        <p class="text-2xl font-semibold text-on-surface-variant leading-[1.3]">
+                            Cita Rasa Nusantara Autentik di Jantung Kota
+                        </p>
+                        <p class="text-lg text-tertiary leading-[1.6] max-w-lg">
+                            Menyajikan pengalaman kuliner premium dengan resep warisan leluhur. Tempat makan keluarga
+                            ternyaman untuk merayakan momen berharga Anda.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <a class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg hover:shadow-[0_8px_24px_rgba(172,45,0,0.2)] transition-all"
+                                href="https://wa.me/082338454845" target="_blank">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Hubungi via WhatsApp
+                            </a>
+                            <a class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface-container-highest text-primary font-bold text-lg hover:bg-surface-dim transition-all"
+                                href="https://maps.app.goo.gl/rSxRR9cbqDvwXfgu7">
+                                <span class="material-symbols-outlined"
+                                    href="https://maps.app.goo.gl/rSxRR9cbqDvwXfgu7">map</span>
+                                Lihat Lokasi
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <!-- Decorative blur -->
+                        <div
+                            class="absolute inset-0 bg-primary/10 blur-3xl rounded-full transform translate-x-10 translate-y-10">
+                        </div>
+                        <img alt="Hidangan autentik restoran di Madiun"
+                            class="relative z-10 w-full h-[600px] object-cover rounded-2xl shadow-[0_32px_64px_rgba(28,28,25,0.06)]"
+                            data-alt="High-end editorial photo of a lavish Indonesian feast on a rustic wooden table, warm lighting, elegant presentation"
+                            src="nnlarasss.webp" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="py-24 bg-surface" id="about">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row gap-16 items-start">
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-on-surface">Cerita Nona Laras</h2>
+                        <div class="w-16 h-1 bg-primary rounded-full"></div>
+                        <p class="text-lg text-tertiary leading-[1.6]">
+                            Sebagai salah satu destinasi utama <strong class="text-on-surface font-semibold">kuliner
+                                Madiun</strong>, Nona Laras lahir dari kecintaan mendalam terhadap kekayaan rempah
+                            Nusantara. Kami mengkurasi setiap bahan dengan standar editorial untuk memastikan setiap
+                            suapan bukan sekadar rasa, melainkan sebuah perjalanan budaya.
+                        </p>
+                        <p class="text-lg text-tertiary leading-[1.6]">
+                            Bagi Anda yang mencari rekomendasi <strong class="text-on-surface font-semibold">makan enak
+                                Madiun</strong>, dapur kami memadukan teknik memasak tradisional dengan standar
+                            kebersihan dan presentasi modern. Suasana hangat nan elegan menjadikan kami pilihan sempurna
+                            untuk pertemuan keluarga, bisnis, atau sekadar menikmati suasana di Madiun.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                        <img alt="Suasana restoran" class="w-full h-48 object-cover rounded-xl"
+                            data-alt="Warm interior shot of a fine dining restaurant with natural wood accents and soft ambient lighting"
+                            src="indoor1.webp" />
+                        <img alt="Proses memasak" class="w-full h-48 object-cover rounded-xl mt-8"
+                            data-alt="Close up of a chef plating a beautiful dish with precision, dramatic kitchen lighting"
+                            src="indoor2.webp" />
+                        <img alt="Detail interior" class="w-full h-48 object-cover rounded-xl col-span-2"
+                            data-alt="Artisanal ceramic plates stacked on a dark wooden table top, soft focus background"
+                            src="makanan.webp" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Section -->
+        <section class="py-24 bg-surface-container-low" id="menu">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-on-surface">Menu Signature Nona Laras
+                    </h2>
+                    <p class="text-lg text-tertiary">Mahakarya kuliner yang mendefinisikan rasa autentik.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 (Large) -->
+                    <div class="lg:col-span-2 bg-surface-container-lowest rounded-2xl overflow-hidden group">
+                        <div class="flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-1/2 relative h-64 md:h-auto overflow-hidden">
+                                <img alt="Ayam Goreng Rempah"
+                                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Crispy fried chicken seasoned with rich golden spices, served on a rustic clay plate with fresh garnish"
+                                    src="ayam goreng rempah.jpg" />
+                            </div>
+                            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+                                <div class="uppercase tracking-[0.05em] text-xs font-bold text-primary mb-2">Chef's
+                                    Choice</div>
+                                <h3 class="text-2xl font-bold text-on-surface mb-3">Ayam Goreng Rempah</h3>
+                                <p class="text-tertiary mb-6 leading-[1.6]">Sajian ikonik Nona Laras yang memadukan kehangatan rempah
+                                    tradisional dengan teknik penggorengan sempurna, menghasilkan aroma yang harum memikat dan rasa gurih yang meresap hingga ke tulang.</p>
+                                <div class="mt-auto flex justify-between items-end">
+                                    <span class="text-xl font-semibold text-on-surface">Rp 33.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col group">
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img alt="Sate Lilit"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="Traditional Balinese sate lilit beautifully wrapped around lemongrass stalks, slightly charred, on a banana leaf"
+                                src="sate ayam.jpg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2">Sate Ayam Madura</h3>
+                        <p class="text-tertiary text-sm mb-4 flex-grow">Mahakarya kuliner nusantara berupa sate khas Indonesia yang memadukan kelembutan
+                             daging ayam panggang dengan harmoni rasa manis pedas dari saus kacang dan kecap manis.</p>
+                        <span class="text-lg font-semibold text-on-surface mt-auto">Rp 41.000</span>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col group">
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img alt="Nasi Campur Heritage"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="Elegant presentation of Nasi Campur with rice cone in center surrounded by vibrant, colorful side dishes"
+                                src="guramebakar.jpg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2">Gurame Bakar Jimbaran</h3>
+                        <p class="text-tertiary text-sm mb-4 flex-grow">Sajian ikan gurame segar yang bumbu bakarannya meresap hingga ke dalam
+                             daging gurame yang lembut, menghasilkan perpaduan rasa pedas, manis, dengan sentuhan rasa gurih yang dominan.</p>
+                        <span class="text-lg font-semibold text-on-surface mt-auto">Rp 81.000</span>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="lg:col-span-2 bg-surface-container-lowest rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 group">
+                        <div class="w-full sm:w-1/3 relative h-40 rounded-xl overflow-hidden">
+                            <img alt="Es Dawet"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="Refreshing glass of traditional Indonesian Es Dawet with palm sugar syrup and coconut milk, condensation on glass"
+                                src="minuman.jpg" />
+                        </div>
+                        <div class="w-full sm:w-2/3">
+                            <div class="uppercase tracking-[0.05em] text-xs font-bold text-primary mb-1">Dessert</div>
+                            <h3 class="text-xl font-bold text-on-surface mb-2">Seduhan Racikan Si Nona</h3>
+                            <p class="text-tertiary text-sm mb-4">Sentuhan hangat dalam segala tradisi, perpaduan harmonis antara rempah pilihan
+                                 dan bahan alami yang diracik khusus untuk memberikan ketenangan serta kesegaran autentik khas Nona Laras.</p>
+                            <span class="text-lg font-semibold text-on-surface">Rp 17.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- USP Section -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- USP 1 -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface">Resep Warisan</h3>
+                        <p class="text-tertiary text-sm leading-[1.6]">Menggunakan racikan bumbu rahasia yang diwariskan
+                            turun-temurun.</p>
+                    </div>
+                    <!-- USP 2 -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">chair</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface">Tempat Luas &amp; Nyaman</h3>
+                        <p class="text-tertiary text-sm leading-[1.6]">Kapasitas besar dengan desain interior elegan
+                            untuk segala acara.</p>
+                    </div>
+                    <!-- USP 3 -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">payments</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface">Harga Terjangkau</h3>
+                        <p class="text-tertiary text-sm leading-[1.6]">Pengalaman kuliner premium tanpa perlu menguras
+                            kantong Anda.</p>
+                    </div>
+                    <!-- USP 4 -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface">Pelayanan Ramah</h3>
+                        <p class="text-tertiary text-sm leading-[1.6]">Staf profesional yang siap melayani dengan
+                            kehangatan khas Nusantara.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-24 bg-surface-container-low" id="testimonials">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-on-surface text-center mb-16">Kata Mereka
+                    Tentang Nona Laras</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testi 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl relative shadow-[0_8px_32px_rgba(28,28,25,0.02)]">
+                        <div class="text-primary mb-4 flex">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-tertiary leading-[1.6] mb-6 italic">"Pancen enak tenan rek makanane. Ayam goreng
+                            rempahe bumbune meresap sampe njero. Tempatnya luas cocok buat kumpul keluarga gede."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">
+                                MB</div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Mas Budi</h4>
+                                <span class="text-xs text-tertiary">Local Guide Madiun</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testi 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl relative shadow-[0_8px_32px_rgba(28,28,25,0.02)]">
+                        <div class="text-primary mb-4 flex">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-tertiary leading-[1.6] mb-6 italic">"Akhirnya nemu restoran di Madiun yang
+                            suasananya estetik tapi harganya ga bikin kantong jebol. Sate lilitnya recommended banget!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">
+                                MS</div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Mbak Sari</h4>
+                                <span class="text-xs text-tertiary">Food Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testi 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl relative shadow-[0_8px_32px_rgba(28,28,25,0.02)]">
+                        <div class="text-primary mb-4 flex">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-tertiary leading-[1.6] mb-6 italic">"Pelayanannya ramah pol. Pas bawa rombongan
+                            kantor kesini semua puas. Tempat parkirnya juga gampang. Pasti bakal balik lagi."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">
+                                PB</div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Pak Bambang</h4>
+                                <span class="text-xs text-tertiary">Warga Madiun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Location & Hours -->
+        <section class="py-24 bg-surface" id="location">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-on-surface">Temukan Kami</h2>
+                        <div class="w-16 h-1 bg-primary rounded-full"></div>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                <div>
+                                    <h4 class="font-bold text-on-surface mb-1">Alamat</h4>
+                                    <p class="text-tertiary leading-[1.6]">Jl. Bali No.55, Kartoharjo<br />Madiun, Jawa
+                                        Timur 63117</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">schedule</span>
+                                <div>
+                                    <h4 class="font-bold text-on-surface mb-1">Jam Operasional</h4>
+                                    <p class="text-tertiary leading-[1.6]">Setiap Hari: 10.00 - 22.00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">call</span>
+                                <div>
+                                    <h4 class="font-bold text-on-surface mb-1">Reservasi</h4>
+                                    <p class="text-tertiary leading-[1.6]">WA: 082338454845</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg hover:shadow-lg transition-all"
+                                href="https://wa.me/082338454845" target="_blank">
+                                Reservasi Meja Sekarang
+                            </a>
+                            <a class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface-container-highest text-primary font-bold text-lg hover:bg-surface-dim transition-all"
+                                href="https://maps.app.goo.gl/rSxRR9cbqDvwXfgu7" target="_blank">
+                                <span class="material-symbols-outlined">directions</span> Lihat Rute
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container-high rounded-2xl h-[400px] flex items-center justify-center relative overflow-hidden border border-outline-variant/30">
+                        <iframe allowfullscreen="" class="rounded-2xl" height="100%" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5074211833583!2d111.52358897588301!3d-7.628464675438864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bf184138e4a7%3A0x679427b0b6e9275a!2sJl.%20Bali%20No.55%2C%20Kartoharjo%2C%20Kec.%20Kartoharjo%2C%20Kota%20Madiun%2C%20Jawa%20Timur%2063117!5e0!3m2!1sen!2sid!4v1715850000000!5m2!1sen!2sid"
+                            style="border:0;" width="100%"></iframe></div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-24 bg-surface-container-low" id="faq">
+            <div class="max-w-4xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-on-surface mb-4">Pertanyaan Seputar
+                        Nona Laras</h2>
+                    <p class="text-lg text-tertiary">Informasi yang sering ditanyakan tamu restoran kami.</p>
+                </div>
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 hover:border-outline-variant/60 transition-colors">
+                        <h3 class="text-lg font-bold text-on-surface mb-2">Apakah Nona Laras salah satu restoran di
+                            Madiun yang ramah anak?</h3>
+                        <p class="text-tertiary leading-[1.6]">Tentu saja. Kami menyediakan menu khusus anak-anak dan
+                            area yang luas sehingga keluarga dapat bersantap dengan nyaman.</p>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 hover:border-outline-variant/60 transition-colors">
+                        <h3 class="text-lg font-bold text-on-surface mb-2">Bagaimana dengan fasilitas parkir di Nona
+                            Laras?</h3>
+                        <p class="text-tertiary leading-[1.6]">Kami memiliki area parkir mandiri yang sangat luas, cukup
+                            untuk menampung puluhan mobil pribadi maupun bus rombongan.</p>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 hover:border-outline-variant/60 transition-colors">
+                        <h3 class="text-lg font-bold text-on-surface mb-2">Apakah perlu melakukan reservasi sebelum
+                            datang?</h3>
+                        <p class="text-tertiary leading-[1.6]">Untuk hari biasa (weekdays), Anda bisa datang langsung.
+                            Namun untuk akhir pekan (weekend) atau acara rombongan, kami sangat menyarankan reservasi
+                            via WhatsApp H-1.</p>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 hover:border-outline-variant/60 transition-colors">
+                        <h3 class="text-lg font-bold text-on-surface mb-2">Apakah tersedia ruangan VIP untuk acara
+                            privat?</h3>
+                        <p class="text-tertiary leading-[1.6]">Ya, kami memiliki VIP Room dengan kapasitas hingga 20
+                            orang, cocok untuk meeting bisnis, arisan, atau ulang tahun intim.</p>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 hover:border-outline-variant/60 transition-colors">
+                        <h3 class="text-lg font-bold text-on-surface mb-2">Apakah semua menu dijamin halal?</h3>
+                        <p class="text-tertiary leading-[1.6]">100% Halal. Kami menjaga kualitas dan kehalalan setiap
+                            bahan baku hidangan Nusantara yang kami sajikan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-[#f7f2ea] dark:bg-[#121210] flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto space-y-8 md:space-y-0 font-['Inter'] text-sm tracking-wide tonal-shift-no-border flat-no-shadows">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+            <div class="text-xl font-black text-[#1c1c19] dark:text-[#fcf9f4]">
+                Nona Laras
+            </div>
+            <p class="text-tertiary max-w-sm">Jadikan setiap momen bersantap Anda tak terlupakan di restoran di Madiun
+                pilihan keluarga tercinta.</p>
+            <p class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 mt-4">
+                © 2024 Nona Laras. Authentic Indonesian Heritage Cuisine in Madiun.
+            </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#ac2d00] dark:hover:text-[#ff7043] transition-colors opacity-80 hover:opacity-100"
+                href="#">Privacy Policy</a>
+            <a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#ac2d00] dark:hover:text-[#ff7043] transition-colors opacity-80 hover:opacity-100"
+                href="#">Terms of Service</a>
+            <a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#ac2d00] dark:hover:text-[#ff7043] transition-colors opacity-80 hover:opacity-100"
+                href="#">Contact Us</a>
+            <a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#ac2d00] dark:hover:text-[#ff7043] transition-colors opacity-80 hover:opacity-100"
+                href="#">Careers</a>
+        </div>
+    </footer>
+</body>
+
+</html>
